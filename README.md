@@ -12,6 +12,8 @@ The goal was not to create an autonomous AI that blindly closes tickets. It was 
 
 ## Architecture
 
+<img width="1536" height="1024" alt="OpsPilot Architecture Diagram" src="https://github.com/user-attachments/assets/70f8d394-4a62-4e8a-9536-004ad8a5936d" />
+
 At a high level, OpsPilot follows this workflow:
 
 ```text
