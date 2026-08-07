@@ -22,7 +22,7 @@ The goal was not to create an autonomous AI that blindly closes tickets. It was 
 
 ## Architecture
 
-OpsPilot Architecture Diagram.png
+![OpsPilot Architecture](assets/opspilot-architecture.png)
 
 OpsPilot separates AI reasoning from authorization and execution. The model proposes actions, deterministic controls validate them, a human approves consequential changes, ServiceNow executes authorized updates, and PostgreSQL records the audit trail.
 
