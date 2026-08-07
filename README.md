@@ -1,5 +1,15 @@
 # OpsPilot: Building an Approval-Gated AI Agent for IT Service Management
 
+## Contents
+
+- [Architecture](#architecture)
+- [Structured Incident Analysis](#structured-incident-analysis)
+- [ServiceNow Integration](#integrating-with-servicenow)
+- [Human Approval](#human-approval-as-a-security-boundary)
+- [PostgreSQL Auditability](#adding-postgresql-for-auditability)
+- [Designing for AI Failure](#designing-for-ai-failure)
+- [Lessons Learned](#lessons-learned)
+
 Modern IT service desks generate enormous amounts of structured operational data, but much of the work surrounding that data is still manual. An analyst opens an incident, interprets the description, investigates the likely cause, determines the appropriate assignment or resolution path, documents the work, and updates the ITSM platform.
 
 I built **OpsPilot** to explore a practical question:
