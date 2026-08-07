@@ -3,12 +3,19 @@
 ## Contents
 
 - [Architecture](#architecture)
+- [Example Workflow](#example-workflow)
 - [Structured Incident Analysis](#structured-incident-analysis)
-- [ServiceNow Integration](#integrating-with-servicenow)
-- [Human Approval](#human-approval-as-a-security-boundary)
-- [PostgreSQL Auditability](#adding-postgresql-for-auditability)
+- [Integrating With ServiceNow](#integrating-with-servicenow)
+- [Human Approval as a Security Boundary](#human-approval-as-a-security-boundary)
+- [Protecting Closed Incidents](#protecting-closed-incidents)
+- [Handling ACL Failures](#handling-acl-failures)
+- [Adding PostgreSQL for Auditability](#adding-postgresql-for-auditability)
+- [Why the Database Is Separate From ServiceNow](#why-the-database-is-separate-from-servicenow)
+- [Failure Is Part of the Architecture](#failure-is-part-of-the-architecture)
 - [Designing for AI Failure](#designing-for-ai-failure)
+- [What I Would Build Next](#what-i-would-build-next)
 - [Lessons Learned](#lessons-learned)
+- [Closing Thoughts](#closing-thoughts)
 
 Modern IT service desks generate enormous amounts of structured operational data, but much of the work surrounding that data is still manual. An analyst opens an incident, interprets the description, investigates the likely cause, determines the appropriate assignment or resolution path, documents the work, and updates the ITSM platform.
 
@@ -83,6 +90,15 @@ A major design principle is that **analysis and authorization are separate opera
 The AI can recommend an action. It cannot decide that it is authorized to perform that action.
 
 That distinction became increasingly important as I tested the system against actual ServiceNow workflows.
+
+## Example Workflow
+
+Sanitized example inputs and outputs are included to demonstrate the structured contract between incident retrieval, AI analysis, validation, and approval:
+
+- [`examples/sample-incident.json`](examples/sample-incident.json)
+- [`examples/sample-recommendation.json`](examples/sample-recommendation.json)
+
+These files contain no production credentials, customer information, or real incident data.
 
 ## Structured Incident Analysis
 
