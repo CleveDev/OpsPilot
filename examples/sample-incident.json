@@ -1,0 +1,26 @@
+{
+  "number": "INC0001234",
+  "short_description": "User unable to connect to corporate Wi-Fi",
+  "description": "User reports repeated authentication failures when connecting to the corporate wireless network from a company-issued laptop. Other users in the same area are connected successfully.",
+  "state": "In Progress",
+  "priority": "3 - Moderate",
+  "assignment_group": "Service Desk",
+  "caller": {
+    "display_name": "Example User"
+  },
+  "configuration_item": {
+    "display_name": "CORP-LAPTOP-042"
+  },
+  "work_notes": [
+    "Confirmed user credentials are active.",
+    "Restarted wireless adapter with no change.",
+    "Issue persists on corporate SSID only."
+  ],
+  "customer_comments": [
+    "The issue started this morning."
+  ],
+  "metadata": {
+    "source": "sanitized_example",
+    "contains_real_customer_data": false
+  }
+}

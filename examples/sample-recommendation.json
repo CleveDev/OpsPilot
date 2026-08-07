@@ -1,0 +1,46 @@
+{
+  "incident_number": "INC0001234",
+  "analysis": {
+    "summary": "Authentication is failing for one endpoint while nearby users remain connected, suggesting a device-specific wireless or authentication issue rather than a site-wide outage.",
+    "likely_category": "Network / Wireless",
+    "confidence": 0.86
+  },
+  "recommended_actions": [
+    {
+      "type": "troubleshooting",
+      "action": "Remove the saved corporate wireless profile and reconnect using the current user credentials.",
+      "reason": "A stale or corrupted wireless profile can cause repeated authentication failures on a single endpoint."
+    },
+    {
+      "type": "validation",
+      "action": "Verify the device certificate and authentication status before reassignment.",
+      "reason": "Certificate or identity issues should be ruled out before escalating to the network team."
+    }
+  ],
+  "proposed_changes": {
+    "assignment_group": {
+      "current": "Service Desk",
+      "proposed": "Network",
+      "requires_validation": true,
+      "validation_source": "active ServiceNow assignment groups"
+    },
+    "work_notes": "Reviewed authentication symptoms. Credentials are active and nearby users are connected successfully. Recommend rebuilding the wireless profile and validating device authentication/certificate status before escalation.",
+    "customer_comment": "We are continuing to investigate the wireless authentication issue. Your account is active, and the problem appears to be isolated to the device rather than a broader network outage."
+  },
+  "guards": {
+    "incident_exists": true,
+    "incident_is_writable": true,
+    "assignment_group_verified": true,
+    "required_fields_present": true,
+    "human_approval_required": true,
+    "approved": false
+  },
+  "execution": {
+    "status": "not_executed",
+    "reason": "Awaiting human approval"
+  },
+  "metadata": {
+    "example_only": true,
+    "contains_real_customer_data": false
+  }
+}
